@@ -1,4 +1,4 @@
-from django.conf.urls import url
+#from django.conf.urls import url
 from django.contrib import admin
 from django.urls import include
 from django.urls import path, re_path
@@ -12,7 +12,7 @@ urlpatterns = [
     re_path(r'^events/$' ,views.events, name='event-list'),
     path('events/<str:pk>' ,views.EventDetailView.as_view(), name='event-detail'),
     path('category/<category>' ,views.categoryView.as_view(), name='event-list'),
-    url(r'^register/$', views.register, name='register'),
+    path(r'^register/$', views.register, name='register'),
     # path('login/', user_login, name="user_login"),
     # path('success/', success, name="user_success"),
     # path('logout/', user_logout, name="user_logout"),
